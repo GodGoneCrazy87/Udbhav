@@ -1,0 +1,302 @@
+[
+  {
+    "date": "11-6-25",
+    "eventname": "Mirror Play",
+    "event": "Acting arena",
+    "time": "4:00 to 6:00",
+    "venue": "LHC-2",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "mirror-play.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Staff antyakshari",
+    "event": "Staff antyakshari",
+    "time": "3:30 to 5:00",
+    "venue": "ESB -2",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "staff-antyakshari.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Clash of Perspective",
+    "event": "Debate",
+    "time": "3:00 to 6:00",
+    "venue": "LHC-1",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "clash-of-perspective.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Ink and Instinct",
+    "event": "Poetry",
+    "time": "3:30 to 5:30",
+    "venue": "LHC Classroom",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "ink-and-instinct.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Tensions Aligned",
+    "event": "Tug of war",
+    "time": "3:00 to 6:00",
+    "venue": "Quadrangle",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "tensions-aligned.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Harmony Hustle",
+    "event": "Dance off",
+    "time": "3:30 to 6:30",
+    "venue": "Basketball Court",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "harmony-hustle.jpg"
+  },
+  {
+    "date": "11-6-25",
+    "eventname": "Chaos on Canvas",
+    "event": "Paint on anything",
+    "time": "4:30 to 6:00",
+    "venue": "Amphitheatre",
+    "day": "DAY1",
+    "category": "INTRA",
+    "poster": "chaos-on-canvas.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Speak and Sway",
+    "event": "JAM",
+    "time": "4:00 to 6:30",
+    "venue": "ESB -2",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "speak-and-sway.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Staff Quiz",
+    "event": "Staff Quiz",
+    "time": "1:30 to 3:30",
+    "venue": "DES hi-tech",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "staff-quiz.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Artful Opposites",
+    "event": "Rangoli",
+    "time": "3:30 to 6:00",
+    "venue": "ESB board room (opposite)",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "artful-opposites.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Map of Mystery",
+    "event": "Treasure Hunt",
+    "time": "3:30 to 6:00",
+    "venue": "Quadrangle",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "map-of-mystery.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Dual Doodles",
+    "event": "Cartooning",
+    "time": "4:30 to 6:00",
+    "venue": "LHC Classroom",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "dual-doodles.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Kabbadi",
+    "event": "Kabbadi",
+    "time": "-",
+    "venue": "Basketball court",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "kabbadi.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Comedy War",
+    "event": "Comicstan",
+    "time": "3:30 to 6:00",
+    "venue": "Amphitheatre",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "comedy-war.jpg"
+  },
+  {
+    "date": "12-6-25",
+    "eventname": "Antithetical Accord",
+    "event": "Short movie",
+    "time": "4:00 to 6:30",
+    "venue": "ESB -1",
+    "day": "DAY2",
+    "category": "INTRA",
+    "poster": "antithetical-accord.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "VIVACE",
+    "event": "BOTB",
+    "time": "10:00 to 1:00",
+    "venue": "Mainstage",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "vivace.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "CHIROSCURO",
+    "event": "Skit",
+    "time": "12:00 to 4:00",
+    "venue": "ESB-1",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "chiroscuro.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "SYMPHONICS",
+    "event": "Western vocal solo",
+    "time": "12:00 to 4:00",
+    "venue": "ESB-2",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "symphonics.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "QUIZ EX MACHINA",
+    "event": "Quiz",
+    "time": "1:30 to 4:00",
+    "venue": "LHC-1",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "quiz-ex-machina.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "VALORANT",
+    "event": "Valorant",
+    "time": "-",
+    "venue": "Online",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "valorant.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "BGMI",
+    "event": "BGMI",
+    "time": "1:30 pm to 4:00 pm",
+    "venue": "DES hi-tech",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "bgmi.jpg"
+  },
+  {
+    "date": "13-6-25",
+    "eventname": "RACHANA",
+    "event": "MUN",
+    "time": "1:30 to 4:00",
+    "venue": "LHC -2",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "rachana.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "AD-MANIA",
+    "event": "Mad ads",
+    "time": "12:00 to 4:00",
+    "venue": "ESB-1",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "ad-mania.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "UNMASK THE MYSTERY",
+    "event": "Criminal inquest",
+    "time": "12:00 to 4:00",
+    "venue": "LHC-1",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "unmask-the-mystery.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "AAHIRI",
+    "event": "Indian vocal solo",
+    "time": "12:00 to 4:00",
+    "venue": "ESB-2",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "aahiri.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "EKATVA",
+    "event": "Group Dance",
+    "time": "10:00 to 12:00",
+    "venue": "Mainstage",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "ekatva.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "COSPLAY MATSURI",
+    "event": "Cosplay",
+    "time": "11:00 to 4:00",
+    "venue": "DES hi-tech",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "cosplay-matsuri.jpg"
+  },
+  {
+    "date": "14-6-25",
+    "eventname": "TRISHRA",
+    "event": "Instrumental solo",
+    "time": "11:00 to 4:00",
+    "venue": "LHC-2",
+    "day": "DAY4",
+    "category": "INTER",
+    "poster": "trishra.jpg"
+  },
+  {
+    "date": "-",
+    "eventname": "REEL RUSH",
+    "event": "Videography",
+    "time": "-",
+    "venue": "Online",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "reel-rush.jpg"
+  },
+  {
+    "date": "-",
+    "eventname": "FOCUSED EXTREMES",
+    "event": "Photography",
+    "time": "-",
+    "venue": "Online",
+    "day": "DAY3",
+    "category": "INTER",
+    "poster": "focused-extremes.jpg"
+  }
+]
