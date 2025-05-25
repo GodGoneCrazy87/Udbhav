@@ -31,10 +31,13 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className="z-10 hover:underline px-3"
               onClick={() => setIsOpen(false)}
+              className="group relative z-10 px-3 transition-transform duration-300"
             >
-              {label}
+              <span className="inline-block transform transition-transform duration-300 group-hover:scale-[1.1]">
+                {label}
+              </span>
+              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
         </div>
@@ -64,10 +67,13 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className="z-10 hover:underline px-3"
               onClick={() => setIsOpen(false)}
+              className="group relative z-10 px-3 transition-transform duration-300"
             >
-              {label}
+              <span className="inline-block transform transition-transform duration-300 group-hover:scale-[1.1]">
+                {label}
+              </span>
+              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
         </div>
@@ -110,17 +116,22 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-black text-white font-ransom uppercase flex flex-col items-center justify-center space-y-12 py-0 px-4 z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-full bg-black text-white font-ransom uppercase flex flex-col items-center justify-center space-y-12 py-0 px-4 z-40 transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
         style={{ fontSize: "4rem" }}
       >
         {allLinks.map(({ href, label }, index) => (
           <Link
             key={href}
             href={href}
-            className={`hover:underline w-full text-center transform transition-all duration-[900ms] ease-out ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+            className={`hover:underline w-full text-center transform transition-all duration-[900ms] ease-out ${
+              isOpen ? "opacity-100 translate-y-0 scale-[1.1]" : "opacity-0 translate-y-12 scale-100"
+            }`}
             onClick={() => setIsOpen(false)}
             style={{
               transitionDelay: `${index * 180}ms`,
+              transformOrigin: "center",
             }}
           >
             {label}
