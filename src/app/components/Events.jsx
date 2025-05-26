@@ -4,6 +4,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import EventsCard from './EventsCard';
 import events from './Events.json';
+// EventsPage.js or EventsPage.tsx
+import Link from 'next/link';
+
 
 export default function EventsPage() {
   const [search, setSearch] = useState('');
@@ -145,13 +148,17 @@ export default function EventsPage() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: -20 }}
         transition={{ delay: 0.3, duration: 0.7 }}
-        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-16 place-items-center"
       >
-        {filteredEvents.map((event, idx) => (
-          <motion.div key={idx} transition={{ duration: 0.3 }}>
+       {filteredEvents.map((event, idx) => (
+        <motion.div key={idx} transition={{ duration: 0.3 }} whileHover={{ scale: 1.1 }}>
+          <Link href={`/events/${event.eventname.toLowerCase().replace(/\s+/g, '-')}`}>
             <EventsCard {...event} />
-          </motion.div>
-        ))}
+          </Link>
+
+        </motion.div>
+      ))}
+
       </motion.div>
     </div>
   );

@@ -1,14 +1,26 @@
 [
   {
-    "date": "11-6-25",
-    "eventname": "Mirror Play",
-    "event": "Acting arena",
-    "time": "4:00 to 6:00",
-    "venue": "LHC-2",
-    "day": "DAY1",
-    "category": "INTRA",
-    "poster": "mirror-play.jpg"
-  },
+  "date": "11-6-25",
+  "eventname": "Mirror Play",
+  "event": "Acting arena",
+  "time": "4:00 to 6:00",
+  "venue": "LHC-2",
+  "day": "DAY1",
+  "category": "INTRA",
+  "poster": "mirror-play.jpg",
+  "tagline": "Lights, camera, action – it’s your time to shine!",
+  "description": "Unleash your acting prowess and step into the spotlight! Mirror Play offers a platform for aspiring actors to showcase their talents with original performances, followed by impromptu acts.",
+  "rules": [
+    "Team of 1-3 participants.",
+    "Round 1: Perform your original act (3-5 mins).",
+    "Selected teams advance to Round 2: Impromptu performance.",
+    "Props, if needed, to be brought by participants.",
+    "Performances in Kannada, English, or Hindi.",
+    "Be loud and clear; judges’ decision is final."
+  ],
+  "team": "Team of 1-3"
+},
+
   {
     "date": "11-6-25",
     "eventname": "Staff antyakshari",
