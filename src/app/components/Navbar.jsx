@@ -13,8 +13,8 @@ export default function Navbar() {
   ];
 
   const rightLinks = [
-    { href: "/gallery", label: "Gallery" },
-    { href: "/about", label: "About" },
+    //{ href: "/gallery", label: "Gallery" },
+    //{ href: "/about", label: "About" },
   ];
 
   const allLinks = [...leftLinks, ...rightLinks];
