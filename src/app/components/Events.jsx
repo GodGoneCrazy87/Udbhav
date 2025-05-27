@@ -92,7 +92,7 @@ export default function EventsPage() {
           {
             type: 'link',
             label: 'Brochure',
-            href: 'https://www.udbhav.site',
+            href: '/Brochure',
           },
           {
             type: 'link',

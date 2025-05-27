@@ -1,0 +1,36 @@
+@keyframes pulsePlay {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px rgba(0, 255, 128, 0.7));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 128, 1));
+  }
+}
+
+@keyframes pulseHover {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px rgba(128, 0, 255, 0.7));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(128, 0, 255, 1));
+  }
+}
+
+.pulsing-glow {
+  animation: pulsePlay 1.2s infinite ease-in-out;
+  color: #00ff80; /* neon green */
+  will-change: transform, filter;
+}
+
+.group:hover .pulsing-glow {
+  animation: pulseHover 1.2s infinite ease-in-out;
+  color: #8000ff; /* purple */
+}
+
+.transition-transform {
+  will-change: transform;
+}

@@ -7,7 +7,7 @@
   "venue": "Mainstage",
   "day": "DAY4",
   "category": "INTER",
-  "poster": "/Eventposters/bob.png",
+  "poster": "/Eventposters/ekatva.png",
   "tagline": "Grace in tradition. Power in rhythm.",
   "description": "EKATVA celebrates the diversity of Indian dance, where classical roots meet contemporary moves in a vibrant showcase of talent. Dance forms include Classical, Indian Contemporary, Semi-Classical, or any Indian dance form.",
   "rules": [
@@ -169,7 +169,7 @@
   "venue": "ESB-1",
   "day": "DAY2",
   "category": "INTER",
-  "poster": "/Eventposters/antithetical-accord.jpg",
+  "poster": "/Eventposters/photography.png",
   "description": "Unleash your storytelling skills through the lens in FRAME BY FRAME, a platform for budding filmmakers to showcase their creativity and vision. All genres and styles are welcome, as long as they remain original.",
   "rules": [
     "Duration: 10 + 2 minutes (including credits).",
@@ -196,6 +196,7 @@
 {
   "date": "14-6-25",
   "eventname": "AD-MANIA",
+  "event": "ad mania",
   "time": "12:00 to 4:00",
   "venue": "ESB-1",
   "day": "DAY4",
@@ -404,7 +405,7 @@
   "venue": "DES hi-tech",
   "day": "DAY3",
   "category": "INTER",
-  "poster": "/Eventposters/bgmi1.png",
+  "poster": "/Eventposters/bgmi.png",
   "description": "Drop in. Squad up. Dominate the zone. Bring your best plays to the battleground in this intense mobile-only BGMI tournament!",
   "mode": "Offline",
   "team_size": "Minimum 3 players per team",
@@ -505,7 +506,7 @@
   "date": "07-6-25",
   "eventname": "REEL RUSH",
   "event": "FINE ARTS",
-  "time": "9:00 AM (07/06/25) to 9:00 AM (08/06/25)",
+  "time": "9:00 AM (07/06/25)",
   "venue": "Online",
   "day": "DAY1",
   "category": "INTER",

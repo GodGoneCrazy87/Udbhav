@@ -1,6 +1,16 @@
 import Image from 'next/image';
 
-export default function EventsCard({ eventname, event, day, time, venue, category, poster,image }) {
+export default function EventsCard({
+  eventname,
+  event,
+  day,
+  time,
+  venue,
+  category,
+  poster,
+  image,
+  form, // NEW PROP
+}) {
   const isOnline = venue?.toLowerCase() === 'online';
   const normalizedCategory = category?.toUpperCase();
 
@@ -16,7 +26,7 @@ export default function EventsCard({ eventname, event, day, time, venue, categor
   return (
     <div className="relative w-[280px] h-[490px] rounded-xl overflow-hidden transition duration-300">
       
-      {/* Dynamic Background Image */}
+      {/* Background */}
       <Image
         src={backgroundImage}
         alt="Card Background"
@@ -24,19 +34,18 @@ export default function EventsCard({ eventname, event, day, time, venue, categor
         className="object-cover rounded-xl"
       />
 
-      {/* Overlay Content */}
+      {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col justify-between p-4 text-white z-10 font-castleton">
-        
-        {/* Poster at the Top */}
-        <div className="absolute top-[18px] left-[30px] w-[220px] h-[220px] rounded-lg overflow-hidden ">
-  <Image
-    src={image || poster || "/postereg1.png"}
-    alt="Poster"
-    fill
-    className="object-cover"
-  />
-</div>
 
+        {/* Poster */}
+        <div className="absolute top-[18px] left-[30px] w-[220px] h-[220px] rounded-lg overflow-hidden ">
+          <Image
+            src={image || poster || "/postereg1.png"}
+            alt="Poster"
+            fill
+            className="object-cover"
+          />
+        </div>
 
         {/* Category Badge */}
         <div className="absolute top-[2px] left-[8px] z-20">
@@ -60,19 +69,27 @@ export default function EventsCard({ eventname, event, day, time, venue, categor
         </div>
 
         {/* Register Button */}
-        <div className="absolute bottom-[0px] left-[85px] transform -translate-x-1/2">
-          <div className="relative hover:scale-110 transition-transform duration-300 cursor-pointer">
-            <Image
-              src="/Register.svg"
-              alt="Register"
-              width={160}
-              height={60}
-            />
-            <span className="absolute inset-0 flex left-[-15px] items-center justify-center font-ransom text-black text-lg">
-              REGISTER
-            </span>
-          </div>
-        </div>
+        {/* Register Button */}
+<div className="absolute bottom-[0px] left-[85px] transform -translate-x-1/2">
+  <a
+    href={form || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()} // Prevent outer link
+    className="relative hover:scale-110 transition-transform duration-300 cursor-pointer block"
+  >
+    <Image
+      src="/Register.svg"
+      alt="Register"
+      width={160}
+      height={60}
+    />
+    <span className="absolute inset-0 flex left-[-15px] items-center justify-center font-ransom text-black text-lg">
+      REGISTER
+    </span>
+  </a>
+</div>
+
       </div>
     </div>
   );

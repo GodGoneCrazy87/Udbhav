@@ -14,6 +14,20 @@ export default function Home() {
   const [fireTextVisible, setFireTextVisible] = useState(false);
   const [iceTextVisible, setIceTextVisible] = useState(false);
 
+  const [exploreActive, setExploreActive] = useState(false);
+  const scrollToAbout = () => {
+  const aboutSection = document.getElementById("about");
+  if (aboutSection) {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+const [isHovered, setIsHovered] = useState(false);
+
+
+  const toggleExplore = () => {
+    setExploreActive((prev) => !prev);
+  };
+
   useEffect(() => {
     const fireVideo = fireVideoRef.current;
     const iceVideo = iceVideoRef.current;
@@ -123,23 +137,43 @@ export default function Home() {
             Coexistence of Contrasts
           </motion.h2>
 
-          <motion.button
-            onClick={() =>
-              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="mt-12 px-6 py-3 bg-white text-black font-bold rounded-full shadow-md hover:bg-gray-200 transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore Udbhav
-          </motion.button>
+             <motion.button
+  onClick={scrollToAbout}
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => setIsHovered(false)}
+  className="group mt-12 relative px-6 py-3 font-bold rounded-full shadow-md overflow-hidden cursor-pointer text-black"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  {/* Day background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
+    style={{ backgroundImage: "url('/dayImage.jpg')", opacity: isHovered ? 0 : 1 }}
+  />
+
+  {/* Night background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
+    style={{ backgroundImage: "url('/nightImage.jpg')", opacity: isHovered ? 1 : 0 }}
+  />
+
+  {/* Overlay gradient for better text visibility */}
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent pointer-events-none" />
+
+  {/* Text */}
+  <span className="relative z-10 select-none uppercase font-ransom font-thin text-black group-hover:text-white transition-colors duration-300">
+    Explore Udbhav
+  </span>
+</motion.button>
+
+
         </div>
       </motion.section>
 
       {/* About Section */}
 <section
   id="about"
-  className="relative z-20 w-screen h-[100vh] overflow-hidden"
+  className="relative z-20 w-screen h-[95vh] overflow-hidden overflow-x-hidden"
   style={{
     backgroundImage: "url('/icefirereveal.png')",
     backgroundSize: "cover",
@@ -165,7 +199,7 @@ export default function Home() {
     />
           {fireTextVisible && (
             <motion.div
-              className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 w-full"
+              className="relative z-10 mt-[10vh] flex flex-col md:flex-row items-center justify-center gap-6 w-full"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
@@ -173,11 +207,11 @@ export default function Home() {
               <Image
                 src="/msritlogo.png"
                 alt="MSRIT Logo"
-                width={200}
+                width={300}
                 height={200}
                 className="object-contain"
               />
-              <div className="basis-2/3 text-left">
+              <div className="basis-[50vw] ml-40  text-left">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#D66937] uppercase font-ransom mb-2">
                   About MSRIT
                 </h2>
@@ -222,7 +256,7 @@ export default function Home() {
                 <h2 className="text-2xl md:text-3xl font-bold text-[#67C7E6] uppercase font-ransom mb-4">
                   About Udbhav 2025
                 </h2>
-                <p className="text-base md:text-2xl text-white leading-relaxed font-iso font-semibold mb-4">
+                <p className="text-base md:text-lg text-white leading-relaxed font-iso font-semibold mb-4">
                   Udbhav is the flagship cultural fest of Ramaiah Institute of Technology (MSRIT), Bengaluru, and one of South India’s most anticipated student festivals.
                 </p>
                 <p className="text-sm md:text-lg text-white leading-relaxed font-iso font-semibold mb-2">

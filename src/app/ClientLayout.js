@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; // ✅ Detect page changes
 import Navbar from "./components/Navbar";
+import MusicPlayer from "./components/MusicPlayer";
 
 export default function ClientLayout({ children }) {
 
@@ -10,6 +11,7 @@ export default function ClientLayout({ children }) {
         
         <>
           <Navbar />
+          <MusicPlayer />
           <main>{children}</main>
         </>
      
