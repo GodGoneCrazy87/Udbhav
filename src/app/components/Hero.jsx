@@ -77,17 +77,17 @@ export default function Home() {
     <Image
       src="/udbh.png"
       alt="Udbhav Logo"
-      width={80}
-      height={80}
-      className="h-[8vh] w-auto object-contain"
+      width={70}
+      height={70}
+      className="h-[7vh] w-auto object-contain"
       priority
     />
     <Image
       src="/av25.png"
       alt="AV'25 Logo"
-      width={80}
-      height={80}
-      className="h-[8vh] w-auto object-contain"
+      width={70}
+      height={70}
+      className="h-[7vh] w-auto object-contain"
       priority
     />
   </div>

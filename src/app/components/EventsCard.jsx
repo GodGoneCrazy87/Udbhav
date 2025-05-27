@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function EventsCard({ eventname, event, day, time, venue, category, poster }) {
+export default function EventsCard({ eventname, event, day, time, venue, category, poster,image }) {
   const isOnline = venue?.toLowerCase() === 'online';
   const normalizedCategory = category?.toUpperCase();
 
@@ -28,14 +28,15 @@ export default function EventsCard({ eventname, event, day, time, venue, categor
       <div className="absolute inset-0 flex flex-col justify-between p-4 text-white z-10 font-castleton">
         
         {/* Poster at the Top */}
-        <div className="absolute top-[18px] left-[30px] w-[220px] h-[220px] rounded-lg overflow-hidden">
-          <Image
-            src={'/postereg1.png'}
-            alt="Poster"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <div className="absolute top-[18px] left-[30px] w-[220px] h-[220px] rounded-lg overflow-hidden ">
+  <Image
+    src={image || poster || "/postereg1.png"}
+    alt="Poster"
+    fill
+    className="object-cover"
+  />
+</div>
+
 
         {/* Category Badge */}
         <div className="absolute top-[2px] left-[8px] z-20">
