@@ -79,7 +79,7 @@ const [isHovered, setIsHovered] = useState(false);
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex flex-col items-center text-center mt-[15vh] md:mt-[5vh] w-full">
+        <div className="flex flex-col items-center text-center mt-[0vh] md:mt-[5vh] w-full">
           <motion.div
   className="flex items-center justify-center space-x-6"
   initial={{ opacity: 0, y: 50 }}
@@ -87,13 +87,13 @@ const [isHovered, setIsHovered] = useState(false);
   transition={{ duration: 1, delay: 0.3 }}
 >
   {/* On mobile, show both logos same size */}
-  <div className="flex space-x-6 md:hidden">
+  <div className="flex space-x-6 md:hidden ">
     <Image
       src="/udbh.png"
       alt="Udbhav Logo"
       width={70}
       height={70}
-      className="h-[7vh] w-auto object-contain"
+      className="h-[6.5vh] w-auto object-contain"
       priority
     />
     <Image
@@ -101,7 +101,7 @@ const [isHovered, setIsHovered] = useState(false);
       alt="AV'25 Logo"
       width={70}
       height={70}
-      className="h-[7vh] w-auto object-contain"
+      className="h-[6.5vh] w-auto object-contain"
       priority
     />
   </div>
@@ -128,7 +128,7 @@ const [isHovered, setIsHovered] = useState(false);
 </motion.div>
 
           <motion.h2
-            className="mt-10 px-4 text-3xl md:text-5xl uppercase font-thin text-white font-ransom tracking-wide"
+            className="mt-10 px-4 text-2xl md:text-5xl uppercase font-thin text-white font-ransom tracking-wide"
             style={{ WebkitTextStroke: "1px black" }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -199,33 +199,36 @@ const [isHovered, setIsHovered] = useState(false);
     />
           {fireTextVisible && (
             <motion.div
-              className="relative z-10 mt-[10vh] flex flex-col md:flex-row items-center justify-center gap-6 w-full"
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              <Image
-                src="/msritlogo.png"
-                alt="MSRIT Logo"
-                width={300}
-                height={200}
-                className="object-contain"
-              />
-              <div className="basis-[50vw] ml-40  text-left">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#D66937] uppercase font-ransom mb-2">
-                  About MSRIT
-                </h2>
-                <p className="text-sm md:text-lg text-white leading-relaxed font-iso font-semibold">
-                  M. S. Ramaiah Institute of Technology (MSRIT), established in
-                  1962 in Bengaluru, is one of India's premier engineering
-                  institutions. Affiliated with VTU and accredited by NAAC with
-                  an A+ grade, MSRIT offers a wide range of UG, PG, and Ph.D.
-                  programs. With strong industry partnerships and a legacy of
-                  innovation, MSRIT fosters excellence in education, research,
-                  and student-driven initiatives like Udbhav.
-                </p>
-              </div>
-            </motion.div>
+  className="relative z-10 mt-[10vh] flex flex-col md:flex-row items-center justify-center gap-6 w-full"
+  initial={{ x: 100, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+  {/* Hidden on mobile, visible on md and up */}
+  <Image
+    src="/msritlogo.png"
+    alt="MSRIT Logo"
+    width={300}
+    height={200}
+    className="object-contain hidden md:block"
+  />
+
+  {/* Full width on mobile, half width + left margin on desktop */}
+  <div className="w-full md:basis-[50vw] md:ml-40 text-left">
+    <h2 className="text-2xl md:text-3xl font-bold text-[#D66937] uppercase font-ransom mb-2">
+      About MSRIT
+    </h2>
+    <p className="text-sm md:text-lg text-white leading-relaxed font-iso font-semibold">
+      M. S. Ramaiah Institute of Technology (MSRIT), established in 1962 in
+      Bengaluru, is one of India's premier engineering institutions. Affiliated
+      with VTU and accredited by NAAC with an A+ grade, MSRIT offers a wide
+      range of UG, PG, and Ph.D. programs. With strong industry partnerships and
+      a legacy of innovation, MSRIT fosters excellence in education, research,
+      and student-driven initiatives like Udbhav.
+    </p>
+  </div>
+</motion.div>
+
           )}
         </div>
 
