@@ -101,7 +101,7 @@ export default function EventPage({ params }) {
     href={form}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative  mt-6 w-[240px] h-[60px] bg-[url('/register.svg')] bg-contain bg-no-repeat bg-center text-black font-ransom text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105"
+    className="group relative  mt-6 w-[240px] h-[60px] bg-[url('/Register.svg')] bg-contain bg-no-repeat bg-center text-black font-ransom text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105"
   >
     <span className="z-10 uppercase font-md relative right-5px ">Register Now</span>
   </a>
