@@ -97,11 +97,11 @@ export default function EventsPage() {
             label: 'Brochure',
             href: '/Brochure',
           },
-          {
-            type: 'link',
-            label: 'Schedule',
-            href: 'https://www.udbhav.site/schedule',
-          },
+          //{
+            //type: 'link',
+            //label: 'Schedule',
+            //href: 'https://www.udbhav.site/schedule',
+          //},
           {
             type: 'button',
             label: `Category: ${categoryFilter}`,
