@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function EventsCard({
   eventname,
   event,
-  day,
+  date,
   time,
   venue,
   category,
@@ -64,7 +64,7 @@ export default function EventsCard({
             {eventname}
           </h3>
           <p className="mt-2 text-lg capitalize">{event}</p>
-          <p className="mt-5 text-lg">🕒 {time}</p>
+          <p className="mt-5 text-lg">🕒 {date}</p>
           <p className="mt-6 text-lg">📍{venue}</p>
         </div>
 

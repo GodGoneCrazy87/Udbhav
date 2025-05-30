@@ -1,5 +1,7 @@
 import Image from "next/image";
 import events from "../../components/Events.json";
+import Link from 'next/link';
+
 
 export function generateStaticParams() {
   return events.map((event) => ({
@@ -7,8 +9,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function EventPage({ params }) {
-  const { eventname } = params;
+export default async function EventPage({ params }) {
+  const { eventname } = await params; // ✅ CORRECT
 
   const event = events.find(
     (e) =>
@@ -36,7 +38,7 @@ export default function EventPage({ params }) {
     category = "",
     team = event.team || event.teamSize || "Individual",
     rules = [],
-    poster,
+    poster1,
     image,
     form = "",
     event_details = {},
@@ -45,7 +47,7 @@ export default function EventPage({ params }) {
     contact,
   } = event;
 
-  const eventImage = image || poster || "/postereg1.png";
+  const eventImage = image || poster1 || "/postereg1.png";
 
   // Normalize rules into an array
   const normalizedRules =
@@ -78,9 +80,7 @@ export default function EventPage({ params }) {
 
           {type && <p><strong className="text-[#6b5b95]">Event Type:</strong> {type}</p>}
           {category && <p><strong className="text-[#6b5b95]">Category:</strong> {category}</p>}
-          {day && <p><strong className="text-[#6b5b95]">Day:</strong> {day}</p>}
           {date && <p><strong className="text-[#6b5b95]">Date:</strong> {date}</p>}
-          {time && <p><strong className="text-[#6b5b95]">Time:</strong> {time}</p>}
           {venue && <p><strong className="text-[#6b5b95]">Venue:</strong> {venue}</p>}
           {team && <p><strong className="text-[#6b5b95]">Team Size:</strong> {team}</p>}
           {registration_fee && <p><strong className="text-[#6b5b95]">Fee:</strong> {registration_fee}</p>}
@@ -97,14 +97,14 @@ export default function EventPage({ params }) {
           )}
 
          {form && (
-  <a
+  <Link
     href={form}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative  mt-6 w-[240px] h-[60px] bg-[url('/Register.svg')] bg-contain bg-no-repeat bg-center text-black font-ransom text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105"
+className="group relative mt-7 w-[240px] h-[60px] bg-[url('/Register2.png')] bg-contain bg-no-repeat bg-center text-white font-sans text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105 mx-auto md:mx-0"
   >
-    <span className="z-10 uppercase font-md relative right-5px ">Register Now</span>
-  </a>
+    <span className="z-10 uppercase font-lg ">Register Now</span>
+  </Link>
 )}
 
 

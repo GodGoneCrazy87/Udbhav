@@ -1,4 +1,5 @@
 'use client';
+import ParallaxBG from './ParallaxBG';
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -35,10 +36,12 @@ export default function EventsPage() {
   });
 
   return (
-    <div
-      className="min-h-screen w-full px-6 md:px-20 py-10 bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{ backgroundImage: "url('/eventspeace.png')" }}
-    >
+     <div className="relative min-h-screen w-full overflow-hidden">
+  {/* Background */}
+  <div className="absolute inset-0 z-0">
+    <ParallaxBG />
+  </div>
+<div className="relative z-10">
       <h1 className="mt-[5vh] mb-0 text-[9vh] font-ransom text-center text-white">EVENTS</h1>
 
       {/* Search Bar */}
@@ -142,7 +145,7 @@ export default function EventsPage() {
           )
         )}
       </motion.div>
-
+  </div>
       {/* Cards */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

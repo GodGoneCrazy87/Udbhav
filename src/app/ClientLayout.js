@@ -11,7 +11,7 @@ export default function ClientLayout({ children }) {
         
         <>
           <Navbar />
-          <MusicPlayer />
+          
           <main>{children}</main>
         </>
      

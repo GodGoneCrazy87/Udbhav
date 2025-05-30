@@ -8,6 +8,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/ekatva.png",
+  "poster1": "/Eventposters/ekatva1.png",
   "tagline": "Grace in tradition. Power in rhythm.",
   "description": "EKATVA celebrates the diversity of Indian dance, where classical roots meet contemporary moves in a vibrant showcase of talent. Dance forms include Classical, Indian Contemporary, Semi-Classical, or any Indian dance form.",
   "rules": [
@@ -33,12 +34,13 @@
 {
   "date": "13-6-25",
   "eventname": "Vivace",
-  "event": "BOTB",
+  "event": "Battle Of The Bands",
   "time": "10:00 to 13:00",
   "venue": "Mainstage",
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/bob.png",
+  "poster1": "/Eventposters/bob1.png",
   "tagline": "Where sound meets spirit. Let the noise speak your truth.",
   "description": "College bands take center stage at VIVACE, showcasing their energy, originality, and talent in a thrilling battle of sounds.",
   "rules": [
@@ -72,6 +74,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/aahiri.png",
+  "poster1": "/Eventposters/aahiri1.png",
   "tagline": "One voice. Infinite traditions.",
   "description": "AAHIRI brings the richness of Indian music to the forefront, inviting solo performers to showcase their vocal artistry in classical and light/filmy genres.",
   "rules": [
@@ -106,6 +109,7 @@
   "day": "DAY2",
   "category": "INTER",
   "poster": "/Eventposters/symphonics.png",
+    "poster1": "/Eventposters/symphonics1.png",
   "description": "One mic. Pure harmony. Take the stage at SYMPHONICS, where solo vocalists command the spotlight with soul, jazz, pop, or indie tunes.",
   "format": "Western solo singing, 3 minutes (+30 seconds buffer)",
   "rules": [
@@ -138,6 +142,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/trishra.png",
+  "poster1": "/Eventposters/trishra1.png",
   "description": "Experience the depth of Indian classical instrumental music through percussion and non-percussion performances that blend rhythm, melody, and improvisation.",
   "rules": [
     "Time Limit: 5 minutes + 2 minutes buffer.",
@@ -157,7 +162,7 @@
   },
   "contact": {
     "Mihir": "8277754938",
-    "Adya": "8861850386"
+    "Adya": "8861550386"
   },
   "form": "https://forms.gle/7UbA8FhfFnJ3qogSA"
 },
@@ -170,6 +175,7 @@
   "day": "DAY2",
   "category": "INTER",
   "poster": "/Eventposters/photography.png",
+    "poster1": "/Eventposters/photography1.png",
   "description": "Unleash your storytelling skills through the lens in FRAME BY FRAME, a platform for budding filmmakers to showcase their creativity and vision. All genres and styles are welcome, as long as they remain original.",
   "rules": [
     "Duration: 10 + 2 minutes (including credits).",
@@ -202,6 +208,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/admania.png",
+    "poster1": "/Eventposters/admania1.png",
   "description": "Unleash your creativity in AD-MANIA, where teams create quirky, exaggerated ads for fictional or real products. Get ready to entertain and make the crowd laugh!",
   "team_size": "(6+2) or (7+1)",
   "time_limits": {
@@ -239,6 +246,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/trishra.png",
+  "poster1": "/Eventposters/trishra1.png",
   "description": "Bring your story to life on stage with Rangantarang, where creativity, humor, and drama unite. Participants can follow the fest theme \"Duality: Coexistence of Contrasts\" or present a unique concept of their choice.",
   "team_size": "6-8 members",
   "time_limit": "10 + 2 minutes (including both on-stage performers and off-stage crew)",
@@ -270,6 +278,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/criminal.png",
+  "poster1": "/Eventposters/criminal1.png",
   "description": "Step into the shoes of a detective, crack the case, and uncover hidden truths in Unmask the Mystery, a team-based detective event that tests your observation, deduction, and teamwork skills.",
   "mode": "Offline (within college premises)",
   "team_size": "3 members",
@@ -300,6 +309,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/quiz.png",
+  "poster1": "/Eventposters/quiz1.png",
   "description": "Quiz ex Machina is where opposites collide and trivia takes a wild turn. One moment you’re a fact-dropping genius, the next you’re debating if soup is a beverage. It’s logic meets chaos—so bring your brains, your madness, and your love for quirky contradictions.",
   "mode": "Offline",
   "team_size": "Up to 3 members",
@@ -332,6 +342,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/trishra.png",
+  "poster1": "/Eventposters/trishra1.png",
   "description": "A dynamic platform for aspiring diplomats and debaters to engage in impactful discussions, simulate real-world policymaking, and drive change through negotiation and research.",
   "mode": "Offline",
   "team_size": "Individual",
@@ -374,6 +385,7 @@
   "day": "DAY4",
   "category": "INTER",
   "poster": "/Eventposters/cosplay.png",
+  "poster1": "/Eventposters/cosplay1.jpg",
   "description": "Step into the world of your favorite characters! Cosplay Matsuri invites participants to embody fictional personas through costume, makeup, and performance. Whether from anime, video games, movies, or original creations — this is your chance to shine.",
   "mode": "Offline",
   "team_size": "Individual",
@@ -406,6 +418,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/bgmi.png",
+  "poster1": "/Eventposters/bgmi1.png",
   "description": "Drop in. Squad up. Dominate the zone. Bring your best plays to the battleground in this intense mobile-only BGMI tournament!",
   "mode": "Offline",
   "team_size": "Minimum 3 players per team",
@@ -441,6 +454,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/valo.png",
+   "poster1": "/Eventposters/valo1.png",
   "description": "Get ready to lock in, frag out, and compete for glory! Show off your precision, strategy, and teamwork in this high-stakes Valorant tournament for the fiercest gamers.",
   "mode": "Online",
   "team_size": "Minimum 5 players (1 optional substitute allowed)",
@@ -478,6 +492,7 @@
   "day": "DAY3",
   "category": "INTER",
   "poster": "/Eventposters/photography.png",
+  "poster1": "/Eventposters/photography1.png",
   "description": "The photography competition is an ONLINE event where participants are free to expand their creativeness and capture moments relevant to the topic given on the spot. Let your creativity meet spontaneity and click that perfect frame.",
   "mode": "Online",
   "team_size": "Individual",
@@ -511,6 +526,7 @@
   "day": "DAY1",
   "category": "INTER",
   "poster": "/Eventposters/reel.png",
+  "poster1": "/Eventposters/reel1.png",
   "description": "Reel Rush is a 24-hour reel-making challenge where teams race to create a compelling 30–60 second reel using only surprise-themed raw footage provided at the start. It's a test of creativity, editing, and storytelling—against the clock.",
   "mode": "Online",
   "team_size": "1–4 participants",
@@ -553,6 +569,7 @@
     "teamSize": "1-3",
     "prize": "Yes",
     "poster": "/Eventposters/actingarena.png",
+    "poster1": "/Eventposters/actingarena1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSdFnFIgeVL9uZ2_rL5CGdngx2t9a5rXT4kBLgU4IudlG63_lw/viewform?usp=header"
   },
   {
@@ -567,6 +584,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/poetry.png",
+    "poster1": "/Eventposters/poetry1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSc9l5TyQY0CfKI6flbtlzhAoKO5_Arm_rH5SXu6yMlwf_3Ipg/viewform?usp=header"
   },
   {
@@ -581,6 +599,7 @@
     "teamSize": "8",
     "prize": "Yes",
     "poster": "/Eventposters/tugofwar.png",
+    "poster1": "/Eventposters/tugofwar1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLScIZzdJGDPazfS0t5hnx2BGdTweeppjlCZJ5ieOAF7YwQutdQ/viewform?usp=header"
   },
   {
@@ -595,6 +614,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/danceoff.png",
+    "poster1": "/Eventposters/danceoff1.png",
     "form": "https://forms.gle/eGMyhyJfppXiBEBQ7"
   },
   {
@@ -609,6 +629,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/paint.png",
+    "poster1": "/Eventposters/paint1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSfZSt1LE1eRRuBHoVA6GWLMQr60EB2IN-gWQSl0xTAiC2BLlg/viewform?usp=header"
   },
   {
@@ -623,6 +644,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/jam.png",
+    "poster1": "/Eventposters/jam1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSdedQXaQdisKSwqUJVSmWEeG3BGKkdWqqx8H-H7H_tcUBYmrw/viewform?usp=header"
   },
   {
@@ -637,6 +659,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/rangoli.png",
+    "poster1": "/Eventposters/rangoli1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSc7uu8OOopKIhGYvo4asbWncgYYaZhNaj3KW2JM6pauUeaXcg/viewform?usp=header"
   },
   {
@@ -651,6 +674,7 @@
     "teamSize": "3",
     "prize": "Yes",
     "poster": "/Eventposters/treasure.png",
+    "poster1": "/Eventposters/treasure1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLScbWC0B6q3NuoPbeY79GpOojNqOKL4d0AgQImS9dKbd5-uzfA/viewform?usp=header"
   },
   {
@@ -665,6 +689,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/cartoon.png",
+    "poster1": "/Eventposters/cartoon1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSfrPo0TTCtH1BKqanhMnPVmw03PhLpc3Bg_Jxm0kgK_4ByxHA/viewform?usp=header"
   },
   {
@@ -679,6 +704,7 @@
     "teamSize": "2-3",
     "prize": "Yes",
     "poster": "/Eventposters/comic.png",
+    "poster1": "/Eventposters/comic1.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtzafvB0v2ICez652poUWE-Kr-g5JqZBiY6jdhiddQw2Yq1Q/viewform?usp=header"
   }
 ]
