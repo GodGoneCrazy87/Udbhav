@@ -16,10 +16,10 @@ export default function EventsCard({
 const normalizedCategory = typeof category === 'string' ? category.toUpperCase() : '';
 
   const getBackgroundImage = () => {
-    if (isOnline) return '/eventcardbg4.svg';
-    if (normalizedCategory === 'INTRA') return '/eventcardbg2.svg';
-    if (normalizedCategory === 'INTER') return '/eventcardbg3.svg';
-    return '/eventcardbg1.svg';
+    if (isOnline) return '/eventbg4.png';
+    if (normalizedCategory === 'INTRA') return '/eventbg2.png';
+    if (normalizedCategory === 'INTER') return '/eventbg1.png';
+    return '/eventbg1.png';
   };
 
   const backgroundImage = getBackgroundImage();
