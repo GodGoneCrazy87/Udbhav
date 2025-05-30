@@ -18,7 +18,6 @@ export default function EventPage({ params }) {
   if (!event) {
     return (
       <div className="relative min-h-screen flex items-center justify-center text-white bg-black px-6 py-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#ff6f61] to-[#6b5b95] opacity-20 animate-chaos z-[-1]" />
         <h2 className="text-3xl font-bold">Event not found 😢</h2>
       </div>
     );
@@ -36,7 +35,7 @@ export default function EventPage({ params }) {
     category = "",
     team = event.team || event.teamSize || "Individual",
     rules = [],
-    poster,
+    poster1,
     image,
     form = "",
     event_details = {},
@@ -45,9 +44,8 @@ export default function EventPage({ params }) {
     contact,
   } = event;
 
-  const eventImage = image || poster || "/postereg1.png";
+  const eventImage = image || poster1 || "/postereg1.png";
 
-  // Normalize rules into an array
   const normalizedRules =
     typeof rules === "string"
       ? rules.split("\n").filter(Boolean)
@@ -56,65 +54,92 @@ export default function EventPage({ params }) {
       : [];
 
   return (
-    <div className="relative min-h-screen bg-[#0b0b0b] text-white px-6 py-16 font-sans">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#ff6f61] to-[#6b5b95] opacity-20 animate-chaos z-[-1]" />
+   <div
+  className="relative w-full text-white px-6 py-16 font-sans bg-no-repeat bg-top"
+  style={{
+    backgroundImage: "url('/eventinfobgfinal.jpg')",
+    backgroundSize: "110% auto", // Full width, auto height
+    backgroundPosition: "top center",
+  }}
+>
 
-      <div className="flex flex-col md:flex-row gap-10 items-start max-w-6xl mx-auto">
-        <div className="w-full max-w-sm">
-          <Image
-            src={eventImage}
-            alt={name}
-            width={400}
-            height={400}
-            className="rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
-            priority
-          />
-        </div>
+  {/* Your content here */}
 
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl mb-4 text-[#ff6f61] font-bold">{name}</h1>
-          {tagline && <p className="italic text-lg mb-4 text-gray-300">{tagline}</p>}
-          {description && <p className="text-base mb-4">{description}</p>}
 
-          {type && <p><strong className="text-[#6b5b95]">Event Type:</strong> {type}</p>}
-          {category && <p><strong className="text-[#6b5b95]">Category:</strong> {category}</p>}
-          {day && <p><strong className="text-[#6b5b95]">Day:</strong> {day}</p>}
-          {date && <p><strong className="text-[#6b5b95]">Date:</strong> {date}</p>}
-          {time && <p><strong className="text-[#6b5b95]">Time:</strong> {time}</p>}
-          {venue && <p><strong className="text-[#6b5b95]">Venue:</strong> {venue}</p>}
-          {team && <p><strong className="text-[#6b5b95]">Team Size:</strong> {team}</p>}
-          {registration_fee && <p><strong className="text-[#6b5b95]">Fee:</strong> {registration_fee}</p>}
+      <div className="bg-black bg-opacity-70 absolute inset-0 z-[-1]" />
 
-          {event_details?.genre && <p><strong className="text-[#6b5b95]">Genre:</strong> {event_details.genre}</p>}
-          {event_details?.dance_forms && <p><strong className="text-[#6b5b95]">Dance Forms:</strong> {event_details.dance_forms}</p>}
-          {event_details?.time_limit && (
-            <p>
-              <strong className="text-[#6b5b95]">Time Limit:</strong>{" "}
-              {typeof event_details.time_limit === "string"
-                ? event_details.time_limit
-                : `${event_details.time_limit.min} - ${event_details.time_limit.max} mins`}
-            </p>
-          )}
+      <div className="flex flex-col md:flex-row gap-10 items-start max-w-6xl mx-auto relative z-10">
+       <div className="relative w-[270px] h-[340px] transform rotate-[-3deg] translate-x-48 translate-y-11 shadow-xl">
+  <Image
+    src={eventImage}
+    alt={name}
+    fill
+    className="object-cover  shadow-2xl"
+  />
+</div>
 
-         {form && (
+
+
+  <div className="flex-1 max-w-[36vw] translate-x-[20vw] translate-y-[3vh]">
+  <h1 className="text-5xl md:text-6xl mb-6 text-[#ff6f61] font-bold font-ransom">{name}</h1>
+
+  {tagline && <p className="italic text-xl mb-4 text-gray-300">{tagline}</p>}
+  {description && <p className="text-lg mb-6">{description}</p>}
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base md:text-lg">
+    {type && <p><strong className="text-[#6b5b95]">Event Type:</strong> {type}</p>}
+    {date && <p><strong className="text-[#6b5b95]">Date:</strong> {date}</p>}
+    {time && <p><strong className="text-[#6b5b95]">Time:</strong> {time}</p>}
+    {venue && <p><strong className="text-[#6b5b95]">Venue:</strong> {venue}</p>}
+    {team && <p><strong className="text-[#6b5b95]">Team Size:</strong> {team}</p>}
+    {registration_fee && <p><strong className="text-[#6b5b95]">Fee:</strong> {registration_fee}</p>}
+  </div>
+
+
+
+  {event_details?.genre && (
+    <p className="mt-2">
+      <strong className="text-[#6b5b95]">Genre:</strong> {event_details.genre}
+    </p>
+  )}
+
+  {event_details?.dance_forms && (
+    <p>
+      <strong className="text-[#6b5b95]">Dance Forms:</strong> {event_details.dance_forms}
+    </p>
+  )}
+
+  {event_details?.time_limit && (
+    <p>
+      <strong className="text-[#6b5b95]">Time Limit:</strong>{" "}
+      {typeof event_details.time_limit === "string"
+        ? event_details.time_limit
+        : `${event_details.time_limit.min} - ${event_details.time_limit.max} mins`}
+    </p>
+  )}
+
+
+{form && (
   <a
     href={form}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative  mt-6 w-[240px] h-[60px] bg-[url('/Register.svg')] bg-contain bg-no-repeat bg-center text-black font-ransom text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105"
+    className="group relative mt-3 w-[240px] h-[80px] bg-[url('/register2.png')] bg-contain bg-no-repeat bg-center text-white font-ransom text-xl flex items-center justify-center transition-transform duration-300 hover:scale-105"
   >
-    <span className="z-10 uppercase font-md relative right-5px ">Register Now</span>
+    {/* Optional semi-transparent dark overlay for better text visibility */}
+    <div className="absolute inset-0 bg-black bg-opacity-30 rounded-xl group-hover:bg-opacity-50 transition-opacity duration-300 z-0" />
+
+    <span className="z-10 uppercase relative group-hover:text-[#ff6f61] transition-colors duration-300 drop-shadow-lg">
+      Register Now
+    </span>
   </a>
 )}
-
-
-        </div>
+ </div>
       </div>
 
       {normalizedRules.length > 0 && (
-        <div className="mt-16 max-w-4xl mx-auto p-6 bg-[#1f1f1f] rounded-xl shadow-xl">
-          <h2 className="text-3xl text-[#ff6f61] font-semibold mb-4">Rules</h2>
-          <ul className="list-disc pl-6 space-y-2">
+        <div className="mt-28 max-w-[550px] mx-auto p-6 translate-x-[20vw] rounded-xl  relative z-10">
+          <ul className="list-disc space-y-2 text-black text-lg">
             {normalizedRules.map((rule, index) => (
               <li key={index}>{rule}</li>
             ))}
@@ -122,26 +147,68 @@ export default function EventPage({ params }) {
         </div>
       )}
 
-      {prizes && (
-        <div className="mt-8 max-w-4xl mx-auto bg-[#1f1f1f] p-6 rounded-xl">
-          <h2 className="text-2xl font-semibold text-[#6b5b95] mb-4">Prizes</h2>
-          <ul className="space-y-2">
-            {prizes.first_prize && <li>🥇 First Prize: {prizes.first_prize}</li>}
-            {prizes.second_prize && <li>🥈 Second Prize: {prizes.second_prize}</li>}
-          </ul>
+{(prizes || contact) && (
+  <div className="relative mt-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+    
+    {/* Prizes Section */}
+    {prizes && (
+      <div className="flex flex-row items-start gap-4 w-full md:w-1/2">
+        {/* Trophy Icon */}
+        <div className="z-10">
+          <Image
+            src="/trophy.png"
+            alt="Trophy"
+            width={80}
+            height={80}
+            className="mt-2"
+          />
         </div>
-      )}
 
-      {contact && (
-        <div className="mt-8 max-w-4xl mx-auto bg-[#1f1f1f] p-6 rounded-xl">
-          <h2 className="text-2xl font-semibold text-[#6b5b95] mb-4">Contacts</h2>
-          <ul className="space-y-1">
-            {Object.entries(contact).map(([name, phone]) => (
-              <li key={name}><strong>{name}</strong>: {phone}</li>
-            ))}
-          </ul>
+        {/* Prizes Info */}
+        <div className="z-10 text-left p-4 text-white">
+          <h2 className="text-2xl font-semibold text-[#6b5b95] mb-2">Prizes</h2>
+          <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
+            {prizes.first_prize && <div>🥇 First Prize: {prizes.first_prize}</div>}
+            {prizes.second_prize && <div>🥈 Second Prize: {prizes.second_prize}</div>}
+          </div>
         </div>
-      )}
+      </div>
+    )}
+
+    {/* Contacts Section */}
+    {contact && (
+      <div className="flex flex-row items-start gap-4 w-full md:w-1/2">
+        {/* Call Icon */}
+        <div className="z-10">
+          <Image
+            src="/callbutton.png"
+            alt="Call Button"
+            width={80}
+            height={80}
+            className="mt-2"
+          />
+        </div>
+
+        {/* Contact Info */}
+        <div className="z-10 text-left p-4 text-white">
+  <h2 className="text-2xl font-semibold text-[#6b5b95] mb-2">Contacts</h2>
+  <div className="flex flex-wrap gap-x-6 gap-y-2">
+    {Object.entries(contact).map(([name, phone]) => (
+      <div key={name} className="whitespace-nowrap">
+        <strong>{name}</strong>: {phone}
+      </div>
+    ))}
+  </div>
+</div>
+
+      </div>
+    )}
+  </div>
+)}
+
+
+
+
     </div>
   );
 }

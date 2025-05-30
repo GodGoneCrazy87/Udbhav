@@ -71,23 +71,21 @@ export default function EventsCard({
         {/* Register Button */}
         {/* Register Button */}
 <div className="absolute bottom-[0px] left-[85px] transform -translate-x-1/2">
-  <a
-    href={form || "#"}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={(e) => e.stopPropagation()} // Prevent outer link
-    className="relative hover:scale-110 transition-transform duration-300 cursor-pointer block"
-  >
-    <Image
-      src="/Register.svg"
-      alt="Register"
-      width={160}
-      height={60}
-    />
-    <span className="absolute inset-0 flex left-[-15px] items-center justify-center font-ransom text-black text-lg">
-      REGISTER
-    </span>
-  </a>
+  <button
+  onClick={(e) => {
+    e.stopPropagation(); // prevent outer click
+    if (form) {
+      window.open(form, '_blank', 'noopener,noreferrer');
+    }
+  }}
+  className="relative hover:scale-110 transition-transform duration-300 cursor-pointer block"
+>
+  <Image src="/Register.svg" alt="Register" width={160} height={60} />
+  <span className="absolute inset-0 flex left-[-15px] items-center justify-center font-ransom text-black text-lg">
+    REGISTER
+  </span>
+</button>
+
 </div>
 
       </div>

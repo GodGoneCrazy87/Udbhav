@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import EventsCard from './EventsCard';
 import events from './Events.json';
-// EventsPage.js or EventsPage.tsx
 import Link from 'next/link';
-
 
 export default function EventsPage() {
   const [search, setSearch] = useState('');
@@ -29,23 +27,33 @@ export default function EventsPage() {
     const nameMatch =
       e.eventname.toLowerCase().includes(search.toLowerCase()) ||
       e.event.toLowerCase().includes(search.toLowerCase());
-    const dayMatch = dayFilter === 'ALL' || e.day.toUpperCase() === dayFilter.replace(' ', '');
+    const dayMatch = dayFilter === 'ALL' || e.day.toUpperCase() === dayFilter;
     const categoryMatch = categoryFilter === 'ALL' || e.category.toUpperCase() === categoryFilter;
     return nameMatch && dayMatch && categoryMatch;
   });
+
+  const sanitizeSlug = (name) =>
+    name.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
 
   return (
     <div
       className="min-h-screen w-full px-6 md:px-20 py-10 bg-cover bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: "url('/eventspeace.png')" }}
     >
-      <h1 className="mt-[5vh] mb-0 text-[9vh] font-ransom text-center text-white">EVENTS</h1>
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mt-[5vh] mb-0 text-[9vh] font-ransom text-center text-white"
+      >
+        EVENTS
+      </motion.h1>
 
       {/* Search Bar */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         className="max-w-2xl mx-auto text-center font-castleton mb-[2vh]"
       >
         <p className="text-white mb-2 text-[1.8vh]">
@@ -70,7 +78,12 @@ export default function EventsPage() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+              />
             </svg>
           </button>
         </div>
@@ -80,7 +93,7 @@ export default function EventsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
         className="flex flex-wrap gap-[6vw] justify-center items-center mb-10 font-castleton uppercase tracking-wide font-bold text-[1.7vh]"
       >
         {[
@@ -143,22 +156,28 @@ export default function EventsPage() {
         )}
       </motion.div>
 
-      {/* Cards */}
+      {/* Cards Section */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: -20 }}
-        transition={{ delay: 0.3, duration: 0.7 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
         className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-16 place-items-center"
       >
-       {filteredEvents.map((event, idx) => (
-        <motion.div key={idx} transition={{ duration: 0.3 }} whileHover={{ scale: 1.1 }}>
-          <Link href={`/events/${event.eventname.toLowerCase().replace(/\s+/g, '-')}`}>
-            <EventsCard {...event} />
-          </Link>
-
-        </motion.div>
-      ))}
-
+        {filteredEvents.map((event, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }} // Animate every time in view
+            transition={{ duration: 0.6, ease: 'easeOut', delay: idx * 0.05 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-full flex justify-center"
+          >
+            <Link href={`/events/${sanitizeSlug(event.eventname)}`}>
+              <EventsCard {...event} />
+            </Link>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
