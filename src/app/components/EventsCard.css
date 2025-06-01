@@ -1,0 +1,387 @@
+/* Page Container */
+.page-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.theme-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* Event Gallery Container */
+.event-gallery {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.toggle-buttons button {
+  z-index: 3;
+}
+.day-theme .toggle-buttons button {
+  color: white;
+}
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.event-gallery h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+/* Theme-specific header colors */
+.day-theme{
+  color: #012622;
+}
+
+.night-theme {
+  color: #1c3fdc;
+}
+
+/* Toggle Buttons Container */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Common Button Styles */
+.toggle-buttons button {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+}
+
+/* Day Button Styles */
+.dayBtn {
+  border: 2px solid #aa891b;
+  /* background-image: url('../../assets/Icons/dayImage.jpg'); */
+}
+
+.dayBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.dayBtn:hover::before,
+.dayBtn.active::before {
+  background: rgba(243, 221, 23, 0.15);
+}
+
+.dayBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+.day-theme button {
+  color:#000000;
+}
+/* Night Button Styles */
+.nightBtn {
+  border: 2px solid #8a9cd8;
+  /* background-image: url('../../assets/Icons/nightImage.jpg'); */
+  color: #ffffff;
+}
+
+.nightBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(8, 104, 231, 0.35);
+  transition: all 0.3s ease;
+}
+
+.nightBtn:hover::before,
+.nightBtn.active::before {
+  background: rgba(138, 156, 216, 0.25);
+}
+
+.nightBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Active States */
+.dayBtn.active {
+  color: white;
+}
+
+.nightBtn.active {
+  color: #000000;
+}
+
+/* Categories Container */
+.categories-container {
+  width: 100%;
+}
+
+/* Event Category */
+.event-category {
+  margin-bottom: 4rem;
+}
+
+.event-category h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Theme-specific category title colors */
+
+/* Event Cards Grid */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Event Card */
+.event-card {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.event-card-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* Theme-specific card styles */
+.day-theme .event-card-inner {
+  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.night-theme .event-card-inner {
+  transition: transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.event-card-inner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Event Overlay */
+.day-theme .event-overlay {
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.25),
+      rgba(75, 108, 183, 0.8));
+}
+
+.night-theme .event-overlay {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(138, 156, 216, 0.8));
+}
+
+.event-card-inner:hover .event-overlay {
+  opacity: 1;
+}
+
+/* Theme-specific overlay text */
+.day-theme .event-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 0 1rem;
+}
+
+.night-theme .event-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 0 1rem;
+}
+
+.day-theme .view-more {
+  color: #000000;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.night-theme .view-more {
+  color: #ffffff;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.day-theme .view-more:hover {
+  background: rgba(75, 108, 183, 0.9);
+  color: white;
+  transform: scale(1.05);
+}
+
+.night-theme .view-more:hover {
+  background: rgba(138, 156, 216, 0.9);
+  color: black;
+  transform: scale(1.05);
+}
+
+.day-overlay {
+  background: rgba(217, 185, 5, 0.25);
+  height: 200%;
+}
+.night-overlay {
+  background: rgba(8, 11, 111, 0.25);
+  height: 200%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .event-card-inner .event-overlay {
+    opacity: 1;
+    
+  }
+
+  .event-gallery h1 {
+    font-size: 2.5rem;
+  }
+
+  .event-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .event-card-inner {
+    height: 200px;
+  }
+
+  .event-overlay h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-gallery h1 {
+    font-size: 2rem;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .toggle-buttons button {
+    width: 100%;
+    max-width: 200px;
+  }
+  .event-card-inner .event-overlay {
+  opacity: 1;
+}
+}
+/* Event Name */
+.event-name {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: inherit; /* Use theme-specific text color */
+  transition: color 0.3s ease;
+}
+
+/* Day Theme Event Name */
+.day-theme .event-name {
+  color: #6e6703; /* Adjust this color for the day theme */
+}
+
+/* Night Theme Event Name */
+.night-theme .event-name {
+  color: #8a9cd8; /* Adjust this color for the night theme */
+}
+
+/* Hover State for Event Name */
+.event-card:hover .event-name {
+  color: #000000; /* Adjust hover color for better visibility */
+  text-decoration: underline; /* Adds a subtle hover effect */
+}
+
+/* Responsive Design for Event Name */
+@media (max-width: 768px) {
+  .event-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-name {
+    font-size: 0.9rem;
+  }
+}
