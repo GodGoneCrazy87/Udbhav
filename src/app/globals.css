@@ -38,6 +38,12 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Youngserif';
+  src: url('/fonts/YoungSerif.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   font-family: "ISOCP3", sans-serif;

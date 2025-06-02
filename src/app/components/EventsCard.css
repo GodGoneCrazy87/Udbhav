@@ -173,7 +173,7 @@
 /* Event Card */
 .event-card {
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
   text-decoration: none;
   position: relative;
@@ -183,7 +183,7 @@
 .event-card-inner {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;

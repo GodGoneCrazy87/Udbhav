@@ -245,8 +245,8 @@
   "venue": "ESB-1",
   "day": "DAY3",
   "category": "INTER",
-  "poster": "/Eventposters/trishra.png",
-  "poster1": "/Eventposters/trishra1.png",
+  "poster": "/Eventposters/skit.png",
+  "poster1": "/Eventposters/skit.png",
   "description": "Bring your story to life on stage with Rangantarang, where creativity, humor, and drama unite. Participants can follow the fest theme \"Duality: Coexistence of Contrasts\" or present a unique concept of their choice.",
   "team_size": "6-8 members",
   "time_limit": "10 + 2 minutes (including both on-stage performers and off-stage crew)",
@@ -586,7 +586,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/poetry.png",
-    "poster1": "/Eventposters/poetry1.png",
+    "poster1": "/Eventposters/poetry.jpg",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSc9l5TyQY0CfKI6flbtlzhAoKO5_Arm_rH5SXu6yMlwf_3Ipg/viewform?usp=header"
   },
   {
@@ -602,7 +602,7 @@
     "teamSize": "8",
     "prize": "Yes",
     "poster": "/Eventposters/tugofwar.png",
-    "poster1": "/Eventposters/tugofwar1.png",
+    "poster1": "/Eventposters/tugofwar.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLScIZzdJGDPazfS0t5hnx2BGdTweeppjlCZJ5ieOAF7YwQutdQ/viewform?usp=header"
   },
   {
@@ -618,7 +618,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/danceoff.png",
-    "poster1": "/Eventposters/danceoff1.png",
+    "poster1": "/Eventposters/danceoff.png",
     "form": "https://forms.gle/eGMyhyJfppXiBEBQ7"
   },
   {
@@ -634,7 +634,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/paint.png",
-    "poster1": "/Eventposters/paint1.png",
+    "poster1": "/Eventposters/chaoscanvas.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSfZSt1LE1eRRuBHoVA6GWLMQr60EB2IN-gWQSl0xTAiC2BLlg/viewform?usp=header"
   },
   {
@@ -650,7 +650,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/jam.png",
-    "poster1": "/Eventposters/jam1.png",
+    "poster1": "/Eventposters/jam.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSdedQXaQdisKSwqUJVSmWEeG3BGKkdWqqx8H-H7H_tcUBYmrw/viewform?usp=header"
   },
   {
@@ -666,7 +666,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/rangoli.png",
-    "poster1": "/Eventposters/rangoli1.png",
+    "poster1": "/Eventposters/rangoli.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSc7uu8OOopKIhGYvo4asbWncgYYaZhNaj3KW2JM6pauUeaXcg/viewform?usp=header"
   },
   {
@@ -682,7 +682,7 @@
     "teamSize": "3",
     "prize": "Yes",
     "poster": "/Eventposters/treasure.png",
-    "poster1": "/Eventposters/treasure1.png",
+    "poster1": "/Eventposters/mapofmystery.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLScbWC0B6q3NuoPbeY79GpOojNqOKL4d0AgQImS9dKbd5-uzfA/viewform?usp=header"
   },
   {
@@ -698,7 +698,7 @@
     "teamSize": "1",
     "prize": "Yes",
     "poster": "/Eventposters/goku.png",
-    "poster1": "/Eventposters/goku.png",
+    "poster1": "/Eventposters/Doodles.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSfrPo0TTCtH1BKqanhMnPVmw03PhLpc3Bg_Jxm0kgK_4ByxHA/viewform?usp=header"
   },
   {
@@ -714,7 +714,7 @@
     "teamSize": "2-3",
     "prize": "Yes",
     "poster": "/Eventposters/comic.png",
-    "poster1": "/Eventposters/comic1.png",
+    "poster1": "/Eventposters/comicstan.png",
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtzafvB0v2ICez652poUWE-Kr-g5JqZBiY6jdhiddQw2Yq1Q/viewform?usp=header"
   }
 ]

@@ -11,7 +11,8 @@ export default {
         iso: ["ISOCP3", "sans-serif"],
         fceb: ['FCEB'],
         castleton: ['Castleton', 'serif'],
-        ransom: ['Ransom','sans-serif']
+        ransom: ['Ransom','sans-serif'],
+        ys:['Youngserif']
       },
     },
   },
