@@ -5,19 +5,30 @@ import clsx from 'clsx';
 const Loader = ({ onFinish }) => {
   const [slideUp, setSlideUp] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
+    // Detect screen size
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
+
     const timer = setTimeout(() => {
-      setSlideUp(true); // Trigger slide-up animation
-      // Wait for animation to finish (e.g., 1s) before unmount
+      setSlideUp(true);
       setTimeout(() => {
         setShowLoader(false);
         onFinish();
-      }, 1000); // must match animation duration
-    }, 5000); // Duration of your loader video
+      }, 1000); // Match animation duration
+    }, 5000); // Match video length
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [onFinish]);
 
   if (!showLoader) return null;
@@ -34,12 +45,12 @@ const Loader = ({ onFinish }) => {
     >
       <video
         ref={videoRef}
-        src="/loader1.mp4"
+        src={isMobile ? '/loaderm.mp4' : '/loader1.mp4'}
         autoPlay
         muted
         playsInline
         preload="auto"
-        className="w-full h-[100vw] object-cover md:h-full"
+        className="w-full h-full object-cover"
       />
     </div>
   );
