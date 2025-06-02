@@ -521,7 +521,7 @@
   "date": "07-6-25",
   "eventname": "REEL RUSH",
   "event": "Videography",
-  "time": "9:00 AM (07/06/25)",
+  "time": "9:00 AM (08/06/25)",
   "venue": "Online",
   "day": "DAY1",
   "category": "INTER",
@@ -530,15 +530,13 @@
   "description": "Reel Rush is a 24-hour reel-making challenge where teams race to create a compelling 30–60 second reel using only surprise-themed raw footage provided at the start. It's a test of creativity, editing, and storytelling—against the clock.",
   "mode": "Online",
   "team_size": "1–4 participants",
-  "format": "Theme and footage released at 9 AM on 7th June 2025; Progress update due at 7 PM on the same day; Final submission by 9 AM on 8th June.",
+  "format": "Begins with the release of theme and raw footage On 8th June 2025 at 9AM. Progress must be shared at the 10-hour mark 8th June 2025 7PM. Final reel submission within 24 hours - 9th June 2025 9AM.",
   "instructions": [
-    "Video length must be between 30 to 60 seconds.",
-    "Only the provided content can be used.",
-    "Appropriate copyright music is allowed.",
-    "Offensive or inappropriate content is prohibited.",
-    "Plagiarism will result in disqualification.",
-    "Progress must be shared at the 10-hour mark (7 PM on 7th June).",
-    "Final submission by 9 AM on 8th June."
+    "Only provided content can be used; appropriate copyright music & soundtrack is allowed.",
+    "Only professional editing softwares allowed - Premiere Pro, Da Vinci , After Effects, Final Cut Pro, Blender",
+    "A maximum of 10% of the total duration may include stock footage.",
+    "Offensive or inappropriate content is strictly prohibited.",
+    "Plagiarism results in immediate disqualification."
   ],
   "registration_fee": "₹200",
   "prizes": {
