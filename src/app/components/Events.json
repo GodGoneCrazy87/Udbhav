@@ -282,7 +282,7 @@
   "description": "Step into the shoes of a detective, crack the case, and uncover hidden truths in Unmask the Mystery, a team-based detective event that tests your observation, deduction, and teamwork skills.",
   "mode": "Offline (within college premises)",
   "team_size": "3 members",
-  "instructions": [
+  "rules": [
     "Teams must consist of Maximum 3 participants.",
     "Report at least 30 minutes prior to the event start.",
     "Multiple rounds with elimination criteria.",
@@ -314,7 +314,7 @@
   "mode": "Offline",
   "team_size": "Up to 3 members",
   "format": "Preliminary + Final Round",
-  "instructions": [
+  "rules": [
     "Teams of up to 3 members can participate.",
     "On-spot registrations are available.",
     "A valid ID card (college ID or govt. ID) is mandatory for entry.",
@@ -351,7 +351,7 @@
     "Lok Sabha: Delimitation of Parliamentary and Assembly Constituencies",
     "UNHRC: Addressing Statelessness and Cross-Border Displacement from Ethnic Tensions in Western Myanmar"
   ],
-  "instructions": [
+  "rules": [
     "Use respectful language; unparliamentary remarks lead to disqualification.",
     "Executive Board decisions are final.",
     "AI & internet use governed by committee rules.",
@@ -390,7 +390,7 @@
   "mode": "Offline",
   "team_size": "Individual",
   "format": "Runway walk + one-liner (1 minute total per participant)",
-  "instructions": [
+  "rules": [
     "Any fandom is accepted as long as the costume follows the event's code of conduct.",
     "Handmade costumes are encouraged but not mandatory.",
     "At least 60% of the body must be covered; no extreme necklines or sheer outfits.",
@@ -423,7 +423,7 @@
   "mode": "Offline",
   "team_size": "Minimum 3 players per team",
   "format": "Mobile platform only, pre-registration required. No emulators, tablets, or simulators allowed.",
-  "instructions": [
+  "rules": [
     "Pre-registration required.",
     "Platform: Mobile phones only (no emulators, tablets, or simulators).",
     "Username: Must use the BGMI username provided during registration.",
@@ -459,7 +459,7 @@
   "mode": "Online",
   "team_size": "Minimum 5 players (1 optional substitute allowed)",
   "format": "Knockout matches; Finals in Best of 3 format; First team to 13 rounds wins",
-  "instructions": [
+  "rules": [
     "Only current college students are eligible.",
     "Minimum 5 players per team (1 optional substitute allowed).",
     "Mode: Online.",
@@ -497,7 +497,7 @@
   "mode": "Online",
   "team_size": "Individual",
   "format": "Online submission; topic revealed on 13th June 2025 at 10:30 A.M.; final photo submissions (5 JPGs) through Google Form by 14th June, 6 PM",
-  "instructions": [
+  "rules": [
     "Topic will be announced on 13th June 2025 at 10:30 A.M.",
     "Photos must be submitted in JPG format.",
     "No editing or post-processing allowed.",
@@ -518,9 +518,9 @@
   "form": "https://forms.gle/7UbA8FhfFnJ3qogSA"
 },
 {
-  "date": "07-6-25",
+  "date": "9:00 AM (08/06/25)",
   "eventname": "REEL RUSH",
-  "event": "Videography",
+  "event": "Video-editing",
   "time": "9:00 AM (08/06/25)",
   "venue": "Online",
   "day": "DAY1",
@@ -531,7 +531,7 @@
   "mode": "Online",
   "team_size": "1–4 participants",
   "format": "Begins with the release of theme and raw footage On 8th June 2025 at 9AM. Progress must be shared at the 10-hour mark 8th June 2025 7PM. Final reel submission within 24 hours - 9th June 2025 9AM.",
-  "instructions": [
+  "rules": [
     "Only provided content can be used; appropriate copyright music & soundtrack is allowed.",
     "Only professional editing softwares allowed - Premiere Pro, Da Vinci , After Effects, Final Cut Pro, Blender",
     "A maximum of 10% of the total duration may include stock footage.",
