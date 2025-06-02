@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   const rightLinks = [
-    //{ href: "/gallery", label: "Gallery" },
+    { href: "/tshirt", label: "T-shirt" },
     //{ href: "/about", label: "About" },
   ];
 
