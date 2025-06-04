@@ -36,7 +36,7 @@ export default async function EventPage({ params }) {
     day = "",
     date = "",
     category = "",
-    team = event.team || event.team_size || "Individual",
+    team = event.team_size,
     rules = [],
     poster1,
     image,
