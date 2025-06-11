@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const rightLinks = [
     { href: "/tshirt", label: "T-shirt" },
-    //{ href: "/about", label: "About" },
+    { href: "/team", label: "team" },
   ];
 
   const allLinks = [...leftLinks, ...rightLinks];
