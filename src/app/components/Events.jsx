@@ -1,6 +1,6 @@
 'use client';
 import ParallaxBG from './ParallaxBG';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import EventsCard from './EventsCard';
 import events from './Events.json';
@@ -16,7 +16,6 @@ export default function EventsPage() {
     const next = order[(order.indexOf(dayFilter) + 1) % order.length];
     setDayFilter(next);
 
-    // Reset incompatible category
     if (
       (next === 'DAY 3' || next === 'DAY 4') &&
       categoryFilter === 'INTRA'
@@ -36,7 +35,6 @@ export default function EventsPage() {
     const cycle = ['ALL', 'INTRA', 'INTER'];
     const next = cycle[(cycle.indexOf(categoryFilter) + 1) % cycle.length];
 
-    // Reset incompatible day
     if (
       (dayFilter === 'DAY 3' || dayFilter === 'DAY 4') &&
       next === 'INTRA'
@@ -56,14 +54,21 @@ export default function EventsPage() {
     setCategoryFilter(next);
   };
 
-  const filteredEvents = events.filter((e) => {
-    const nameMatch =
-      e.eventname.toLowerCase().includes(search.toLowerCase()) ||
-      e.event.toLowerCase().includes(search.toLowerCase());
-    const dayMatch = dayFilter === 'ALL' || e.day.toUpperCase() === dayFilter.replace(' ', '');
-    const categoryMatch = categoryFilter === 'ALL' || e.category.toUpperCase() === categoryFilter;
-    return nameMatch && dayMatch && categoryMatch;
-  });
+  const filteredEvents = useMemo(() => {
+    return events.filter((e) => {
+      const nameMatch =
+        e.eventname.toLowerCase().includes(search.toLowerCase()) ||
+        e.event.toLowerCase().includes(search.toLowerCase());
+
+      const dayMatch =
+        dayFilter === 'ALL' || e.day.toUpperCase() === dayFilter.replace(' ', '');
+
+      const categoryMatch =
+        categoryFilter === 'ALL' || e.category.toUpperCase() === categoryFilter;
+
+      return nameMatch && dayMatch && categoryMatch;
+    });
+  }, [search, dayFilter, categoryFilter]);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -95,7 +100,6 @@ export default function EventsPage() {
             />
             <button
               className="absolute right-3 text-black hover:text-blue-500 transition"
-              onClick={() => console.log('Search clicked:', search)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,9 +186,11 @@ export default function EventsPage() {
       >
         {filteredEvents.map((event, idx) => (
           <motion.div key={idx} transition={{ duration: 0.3 }} whileHover={{ scale: 1.1 }}>
-            <Link href={`/events/${event.eventname.toLowerCase().replace(/\s+/g, '-')}`}>
-              <EventsCard {...event} />
-            </Link>
+           <EventsCard
+              {...event}
+              eventPageLink={`/events/${event.eventname.toLowerCase().replace(/\s+/g, "-")}`}
+            />
+
           </motion.div>
         ))}
       </motion.div>
