@@ -18,52 +18,58 @@ export default function Home() {
   const [exploreActive, setExploreActive] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  const scrollToAbout = () => {
+  const toggleExplore = () => {
+    setExploreActive((prev) => !prev);
+  };
+const scrollToAbout = () => {
+  // Unlock scroll
+  document.body.style.overflow = 'auto';
+
+  // Scroll after a brief delay to allow scroll unlock to take effect
+  setTimeout(() => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const toggleExplore = () => {
-    setExploreActive((prev) => !prev);
-  };
-
+  }, 100);
+};
   useEffect(() => {
-    const fireVideo = fireVideoRef.current;
-    const iceVideo = iceVideoRef.current;
+  const fireVideo = fireVideoRef.current;
+  const iceVideo = iceVideoRef.current;
+  document.body.style.overflow = 'hidden';
 
-    const fireObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          fireVideo.play();
-          setTimeout(() => setFireTextVisible(true), 1500);
-        }
-      },
-      { threshold: 0.5 }
-    );
+  const fireObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        fireVideo.play();
+        setTimeout(() => setFireTextVisible(true), 1500);
+      }
+    },
+    { threshold: 0.5 }
+  );
 
-    const iceObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          iceVideo.play();
-          setTimeout(() => {
-            setIceTextVisible(true);
-            setShowUdbhav(true);
-          }, 1500);
-        }
-      },
-      { threshold: 0.5 }
-    );
+  const iceObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        iceVideo.play();
+        setTimeout(() => {
+          setIceTextVisible(true);
+          setShowUdbhav(true);
+        }, 1500);
+      }
+    },
+    { threshold: 0.5 }
+  );
 
-    if (fireVideo) fireObserver.observe(fireVideo);
-    if (iceVideo) iceObserver.observe(iceVideo);
+  if (fireVideo) fireObserver.observe(fireVideo);
+  if (iceVideo) iceObserver.observe(iceVideo);
 
-    return () => {
-      if (fireVideo) fireObserver.unobserve(fireVideo);
-      if (iceVideo) iceObserver.unobserve(iceVideo);
-    };
-  }, []);
+  return () => {
+    if (fireVideo) fireObserver.unobserve(fireVideo);
+    if (iceVideo) iceObserver.unobserve(iceVideo);
+  };
+}, []);
+
 
   return (
     <main className="relative w-screen overflow-x-hidden bg-black text-white">
@@ -136,7 +142,7 @@ export default function Home() {
       {/* About Section */}
 <section
   id="about"
-  className="relative z-20 w-screen h-[95vh] overflow-hidden"
+  className="relative z-20 w-[100vw] h-[95vh] overflow-hidden"
   style={{
     backgroundImage: "url('/icefirereveal.png')",
     backgroundSize: "cover",
