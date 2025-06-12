@@ -2,18 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const Spline = dynamic(() =>
-  import('@splinetool/react-spline').then((mod) => mod.Spline),
-  { ssr: false }
-);
+import Spline from '@splinetool/react-spline';
 
 export default function TshirtPage() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Set mobile flag for responsive Spline scaling
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -39,9 +33,7 @@ export default function TshirtPage() {
       )}
 
       {/* Background Color for mobile */}
-      {isMobile && (
-        <div className="absolute inset-0 bg-black z-0" />
-      )}
+      {isMobile && <div className="absolute inset-0 bg-black z-0" />}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
