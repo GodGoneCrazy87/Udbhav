@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
+const Spline = dynamic(() =>
+  import('@splinetool/react-spline').then((mod) => mod.Spline),
+  { ssr: false }
+);
 
 export default function TshirtPage() {
   const [isMobile, setIsMobile] = useState(false);
