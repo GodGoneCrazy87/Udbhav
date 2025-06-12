@@ -19,7 +19,7 @@ const coreTeamImages = [
   'team/ep.png',
   'team/events.webp',
   'team/finance.webp',
-  'team/fm.webp',
+  'team/FM.webp',
   'team/hospitality.png',
   'team/hostel.png',
   'team/iclick.png',
